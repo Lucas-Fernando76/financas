@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finanças da Família</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Finanças">
+<meta name="theme-color" content="#f6f7f9">
+<style>
+  html, body { margin:0; height:100%; background:#f6f7f9 }
+  iframe { position:fixed; inset:0; width:100%; height:100%; border:0 }
+</style>
+</head>
+<body>
+<iframe id="app" title="Finanças da Família"></iframe>
+<script>
+  const URL_APP = 'https://script.google.com/macros/s/AKfycbzo8brXlI8q9zHjlI_RopjRpDV7jLf_uiBCQNq7JQXUutzPjnu1stahEHke7WXCTalK/exec';
+  const k = new URLSearchParams(location.hash.slice(1)).get('k') || '';
+  document.getElementById('app').src = URL_APP + '?k=' + encodeURIComponent(k);
+</script>
+</body>
+</html>
